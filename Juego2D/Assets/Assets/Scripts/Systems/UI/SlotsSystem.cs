@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-using static PlayerInventorySystem;
+using static InventorySystem;
 public class SlotsSystem : MonoBehaviour
 {
     public Image itemIcon;

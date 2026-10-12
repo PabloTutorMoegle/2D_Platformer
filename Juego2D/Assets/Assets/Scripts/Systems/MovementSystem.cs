@@ -49,6 +49,17 @@ public class MovementSystem : MonoBehaviour
             _rb.linearVelocity = direction * speed;
         }
     }
+    public void MoveHorizontal(float HorizontalInput, float speed)
+    {
+        if(_rb == null)
+        {
+            return;
+        }
+
+        Vector2 velocity = _rb.linearVelocity;
+        velocity.x = HorizontalInput * speed;
+        _rb.linearVelocity = velocity;
+    }
     public void Jump(float speed)
     {
         if (_rb != null)
