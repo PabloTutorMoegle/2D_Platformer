@@ -12,13 +12,13 @@ using UnityEngine.Events;
 public class PointsController : MonoBehaviour
 {
     [SerializeField] private PointsSystem _ps;
-    [SerializeField] private TMP_Text _scoreText;
+    [SerializeField] private TMP_Text _pointsText;
 
     private void OnEnable()
     {
         if (_ps != null)
         {
-            _ps.OnScoreChanged += UpdateScore;
+            _ps.OnPointsChanged += UpdateScore;
         }
     }
 
@@ -34,15 +34,15 @@ public class PointsController : MonoBehaviour
     {
         if (_ps != null)
         {
-            _ps.OnScoreChanged -= UpdateScore;
+            _ps.OnPointsChanged -= UpdateScore;
         }
     }
 
-    private void UpdateScore(int score)
+    private void UpdateScore(float points)
     {
-        if (_scoreText != null)
+        if (_pointsText != null)
         {
-            _scoreText.text = $"{score}";
+            _pointsText.text = $"{points}";
         }
     }
 }

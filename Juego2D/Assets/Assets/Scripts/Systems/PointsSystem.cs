@@ -6,33 +6,43 @@ using UnityEngine.Events;
 
 public class PointsSystem : MonoBehaviour
 {
-    private int _score = 0;
+    private float _points = 0;
 
-    public int GetScore()
+    public event Action<float> OnPointsChanged;
+
+    private void Start()
     {
-        return _score;
+        if (GameManager.Instance != null)
+        {
+            _points = GameManager.Instance.TotalScore;
+        }
+
+        OnPointsChanged?.Invoke(_points);
     }
 
-    public void AddPoints(int points)
+    public float GetScore()
     {
-        if (points <= 0)
-            return;
-
-        _score += points;
-
-        OnScoreChanged?.Invoke(_score);
+        return _points;
     }
 
-    public event Action<int> OnScoreChanged;
+    public void AddPoints(float points)
+    {
+        if (points <= 0) return;
+
+        _points += points;
+
+        OnPointsChanged?.Invoke(_points);
+    }
 }
+
     // public UnityEvent<string> ScoreTextChange;
     // public UnityEvent<string> MultTextChange;
     // public float mult;
     // public float multpoints = 0;
     // //ComboSystem
-    // private int currentscore;
+    // private float currentscore;
 
-    // private void SumPoints(int points){
+    // private void SumPoints(float points){
     //     multpoints = points * mult;
     //     currentscore += points; //currentscore += points + multpoints;
     //     string u = $"SCORE: {currentscore}";
@@ -40,7 +50,7 @@ public class PointsSystem : MonoBehaviour
     //     ScoreTextChange.Invoke(u);
     //     MultTextChange.Invoke(m);//
 
-    //      int maxScore = PlayerPrefs.GetInt("MaxScore", 0);  // Recuperar puntuación máxima guardada
+    //      float maxScore = PlayerPrefs.GetInt("MaxScore", 0);  // Recuperar puntuación máxima guardada
     //     if (currentscore > maxScore)
     //     {
     //         PlayerPrefs.SetInt("MaxScore", currentscore);  // Guardar nueva puntuación máxima
@@ -51,8 +61,8 @@ public class PointsSystem : MonoBehaviour
     //     mult = m;
     // }
 
-    // //public int getCurrentscore()
-    // public int getCurrentscore() 
+    // //public float getCurrentscore()
+    // public float getCurrentscore() 
     // { 
     //     return currentscore;
     // }
