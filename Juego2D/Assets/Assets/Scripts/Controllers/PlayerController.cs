@@ -20,7 +20,6 @@ public class PlayerController : MonoBehaviour
     // private float attackTimer = 0.3f;
     
     // public GameObject attackHitbox;
-
     //Health variables
     public float maxHealth = 3f;
     public float starterHealth = 3f;

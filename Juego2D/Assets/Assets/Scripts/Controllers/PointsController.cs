@@ -26,7 +26,7 @@ public class PointsController : MonoBehaviour
     {
         if (_ps != null)
         {
-            UpdateScore(_ps.GetScore());
+            UpdateScore(_ps.GetPoints());
         }
     }
 

@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
@@ -8,6 +9,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private string nextSceneName;
     [SerializeField] private Image fadeImage;
     [SerializeField] private float fadeDuration = 0.5f;
+    [SerializeField] private Button firstSelectedButton;
 
     public int _totalCoins;
     private int _collectedCoins;
@@ -19,6 +21,13 @@ public class LevelManager : MonoBehaviour
     private void Start()
     {
         _collectedCoins = 0;
+        if (firstSelectedButton != null)
+        {
+            EventSystem.current.SetSelectedGameObject(null);
+            EventSystem.current.SetSelectedGameObject(
+                firstSelectedButton.gameObject
+            );
+        }
     }
 
     public void CollectCoin()

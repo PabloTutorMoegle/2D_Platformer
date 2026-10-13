@@ -20,7 +20,7 @@ public class PointsSystem : MonoBehaviour
         OnPointsChanged?.Invoke(_points);
     }
 
-    public float GetScore()
+    public float GetPoints()
     {
         return _points;
     }
