@@ -7,6 +7,7 @@ using UnityEngine.InputSystem.Controls;
 
 public class PlayerController : MonoBehaviour
 {
+    public Transform VisualRoot { get; private set; }
     private InputSystem_Actions _actions;
     private MovementSystem _mv;
     private HealthSystem _hs;
@@ -42,9 +43,11 @@ public class PlayerController : MonoBehaviour
         TryGetComponent<MovementSystem>(out _mv);
         TryGetComponent<PointsSystem>(out _ps);
         TryGetComponent<HealthSystem>(out _hs);
-        TryGetComponent<SpriteRenderer>(out _sr);
-        TryGetComponent<Animator>(out _anim);
+        _sr = GetComponentInChildren<SpriteRenderer>(true);
+        _anim = GetComponentInChildren<Animator>(true);
         // TryGetComponent<MeleeAttackSystem>(out _ma);
+
+        VisualRoot = transform.Find("Visual");
     }
 
     private void Start()

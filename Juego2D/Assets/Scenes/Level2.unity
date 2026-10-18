@@ -149,7 +149,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelPlayerSetup
   spawnPoint: {fileID: 770553776}
-  levelSprite: {fileID: -5903738076387312350, guid: e4c9b4ba1b3d3d388b869879c1d0fe70, type: 3}
+  levelSprite: {fileID: 1215469850211893429, guid: 36f625e20e23462408120447f88d4f98, type: 3}
+  levelAnimator: {fileID: 9100000, guid: 571cc109c939eb0478e67b8a3afff343, type: 2}
 --- !u!4 &2847860
 Transform:
   m_ObjectHideFlags: 0
@@ -386,6 +387,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 620807595}
     m_Modifications:
+    - target: {fileID: 2020569219600377994, guid: 603af15a573dd5d41ac881ab8ead9e90, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1215469850211893429, guid: 36f625e20e23462408120447f88d4f98, type: 3}
     - target: {fileID: 2920042168614016522, guid: 603af15a573dd5d41ac881ab8ead9e90, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -640,8 +645,8 @@ Tilemap:
   - first: {x: -9, y: -7, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 4
-      m_TileSpriteIndex: 0
+      m_TileIndex: 3
+      m_TileSpriteIndex: 2
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -730,8 +735,8 @@ Tilemap:
   - first: {x: 10, y: -7, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 4
-      m_TileSpriteIndex: 0
+      m_TileIndex: 3
+      m_TileSpriteIndex: 2
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -750,8 +755,8 @@ Tilemap:
   - first: {x: -10, y: -6, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 4
-      m_TileSpriteIndex: 0
+      m_TileIndex: 3
+      m_TileSpriteIndex: 2
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -780,8 +785,8 @@ Tilemap:
   - first: {x: -7, y: -6, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 4
-      m_TileSpriteIndex: 0
+      m_TileIndex: 5
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -790,8 +795,8 @@ Tilemap:
   - first: {x: 6, y: -6, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 4
-      m_TileSpriteIndex: 0
+      m_TileIndex: 3
+      m_TileSpriteIndex: 2
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -820,8 +825,8 @@ Tilemap:
   - first: {x: 9, y: -6, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 4
-      m_TileSpriteIndex: 0
+      m_TileIndex: 5
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -1259,21 +1264,24 @@ Tilemap:
     m_RefCount: 0
     m_Data: {fileID: 0}
   - serializedVersion: 2
-    m_RefCount: 0
-    m_Data: {fileID: 0}
+    m_RefCount: 4
+    m_Data: {fileID: 11400000, guid: 43ade8f034fcb1549917ed9489a439df, type: 2}
   - serializedVersion: 2
-    m_RefCount: 54
+    m_RefCount: 48
     m_Data: {fileID: 11400000, guid: 48e84445ec022054c99a08ac2ffdfa0c, type: 2}
   - serializedVersion: 2
-    m_RefCount: 9
+    m_RefCount: 11
     m_Data: {fileID: 11400000, guid: 95fd32c3d5b355640bf8874f9a573b00, type: 2}
   m_TileSpriteArray:
   - serializedVersion: 2
-    m_RefCount: 54
+    m_RefCount: 48
     m_Data: {fileID: 849770666, guid: ca4722fac05e84e4aac63d608908205c, type: 3}
   - serializedVersion: 2
-    m_RefCount: 9
+    m_RefCount: 11
     m_Data: {fileID: 1316736512, guid: ca4722fac05e84e4aac63d608908205c, type: 3}
+  - serializedVersion: 2
+    m_RefCount: 4
+    m_Data: {fileID: -776659014, guid: ca4722fac05e84e4aac63d608908205c, type: 3}
   m_TileMatrixArray:
   - serializedVersion: 2
     m_RefCount: 63
@@ -2620,6 +2628,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 620807595}
     m_Modifications:
+    - target: {fileID: 2020569219600377994, guid: 603af15a573dd5d41ac881ab8ead9e90, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1215469850211893429, guid: 36f625e20e23462408120447f88d4f98, type: 3}
     - target: {fileID: 2920042168614016522, guid: 603af15a573dd5d41ac881ab8ead9e90, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3009,6 +3021,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 620807595}
     m_Modifications:
+    - target: {fileID: 2020569219600377994, guid: 603af15a573dd5d41ac881ab8ead9e90, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1215469850211893429, guid: 36f625e20e23462408120447f88d4f98, type: 3}
     - target: {fileID: 2920042168614016522, guid: 603af15a573dd5d41ac881ab8ead9e90, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

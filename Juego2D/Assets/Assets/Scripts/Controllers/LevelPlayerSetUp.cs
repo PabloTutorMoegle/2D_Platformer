@@ -3,13 +3,20 @@ using UnityEngine;
 
 public class LevelPlayerSetup : MonoBehaviour
 {
-    [SerializeField] private Transform spawnPoint;
-    [SerializeField] private Sprite levelSprite;
+    public Transform spawnPoint;
+    public Sprite levelSprite;
+    public RuntimeAnimatorController levelAnimator;
+    public Vector3 levelScale = Vector3.one;
 
     private void Start()
     {
         PlayerController player =
-            FindFirstObjectByType<PlayerController>();
+            PlayerPersistence.PersistentPlayer;
+
+        if (player == null)
+        {
+            player = FindFirstObjectByType<PlayerController>();
+        }
 
         if (player == null)
         {
@@ -21,15 +28,25 @@ public class LevelPlayerSetup : MonoBehaviour
             player.transform.position = spawnPoint.position;
         }
 
-        if (levelSprite != null)
+        if (player.VisualRoot != null)
         {
-            SpriteRenderer spriteRenderer =
-                player.GetComponentInChildren<SpriteRenderer>();
+            player.VisualRoot.localScale = levelScale;
+        }
 
-            if (spriteRenderer != null)
-            {
-                spriteRenderer.sprite = levelSprite;
-            }
+        Animator animator =
+            player.GetComponentInChildren<Animator>(true);
+
+        if (animator != null && levelAnimator != null)
+        {
+            animator.runtimeAnimatorController = levelAnimator;
+        }
+
+        SpriteRenderer spriteRenderer =
+            player.GetComponentInChildren<SpriteRenderer>(true);
+
+        if (spriteRenderer != null && levelSprite != null)
+        {
+            spriteRenderer.sprite = levelSprite;
         }
     }
 }

@@ -17,7 +17,8 @@ public class CoinManager : MonoBehaviour
     [SerializeField] private GameObject coinPrefab;
     [SerializeField] private string levelFileName = "Level1";
     [SerializeField] private LevelManager levelManager;
-
+    [SerializeField] private Sprite nextCoinSprite;
+    private readonly List<CoinController> spawnedCoins = new List<CoinController>();
     private readonly List<CoinData> coins = new List<CoinData>();
     private int nextExpectedCoin = 0;
 
@@ -44,7 +45,6 @@ public class CoinManager : MonoBehaviour
 
         levelManager.SetTotalCoins(coins.Count);
     }
-
     private void LoadCoins()
     {
         coins.Clear();
@@ -87,7 +87,6 @@ public class CoinManager : MonoBehaviour
             });
         }
     }
-
     private bool TryParseFloat(string value, out float result)
     {
         return float.TryParse(
@@ -97,7 +96,6 @@ public class CoinManager : MonoBehaviour
             out result
         );
     }
-
     private void SpawnCoins()
     {
         for (int i = 0; i < coins.Count; i++)
@@ -119,10 +117,12 @@ public class CoinManager : MonoBehaviour
                 continue;
             }
 
-            coin.Initialize(this, i);
+            coin.Initialize(this, i, nextCoinSprite);
+            spawnedCoins.Add(coin);
+
+            UpdateNextCoinSprite();
         }
     }
-
     public void CollectCoin(
         int coinIndex,
         PointsSystem pointsSystem,
@@ -153,5 +153,35 @@ public class CoinManager : MonoBehaviour
             levelManager.CollectCoin();
 
         coin.MarkCollected();
+        if (coinIndex == nextExpectedCoin)
+        {
+            points = coins[coinIndex].orderedPoints;
+            nextExpectedCoin++;
+        }
+        else
+        {
+            points = coins[coinIndex].basePoints;
+        }
+
+        pointsSystem.AddPoints(points);
+
+        if (levelManager != null)
+            levelManager.CollectCoin();
+
+        coin.MarkCollected();
+
+        UpdateNextCoinSprite();
+    }
+    private void UpdateNextCoinSprite()
+    {
+        foreach (CoinController coin in spawnedCoins)
+        {
+            if (coin == null)
+                continue;
+
+            coin.SetAsNextCoin(
+                coin.GetCoinIndex() == nextExpectedCoin
+            );
+        }
     }
 }
