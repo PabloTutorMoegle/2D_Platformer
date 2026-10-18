@@ -123,11 +123,7 @@ public class CoinManager : MonoBehaviour
             UpdateNextCoinSprite();
         }
     }
-    public void CollectCoin(
-        int coinIndex,
-        PointsSystem pointsSystem,
-        CoinController coin
-    )
+    public void CollectCoin(int coinIndex, PointsSystem pointsSystem, CoinController coin)
     {
         if (coin == null || pointsSystem == null)
             return;
@@ -153,25 +149,10 @@ public class CoinManager : MonoBehaviour
             levelManager.CollectCoin();
 
         coin.MarkCollected();
-        if (coinIndex == nextExpectedCoin)
-        {
-            points = coins[coinIndex].orderedPoints;
-            nextExpectedCoin++;
-        }
-        else
-        {
-            points = coins[coinIndex].basePoints;
-        }
-
-        pointsSystem.AddPoints(points);
-
-        if (levelManager != null)
-            levelManager.CollectCoin();
-
-        coin.MarkCollected();
 
         UpdateNextCoinSprite();
     }
+
     private void UpdateNextCoinSprite()
     {
         foreach (CoinController coin in spawnedCoins)
