@@ -2,31 +2,38 @@ using UnityEngine;
 
 public class CoinController : MonoBehaviour
 {
-    [SerializeField] private int points = 100;
-    private bool _collected = false;
-    public GameObject levelManagerObject;
-    private LevelManager _lm;
+    private CoinManager coinManager;
+    private int coinIndex;
+    private bool collected = false;
 
-    private void Awake()
+    public void Initialize(CoinManager manager, int index)
     {
-        _lm = levelManagerObject.TryGetComponent<LevelManager>(out _lm) ? _lm : null;
+        coinManager = manager;
+        coinIndex = index;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (_collected)
+        if (collected)
             return;
 
-        PointsSystem _ps = collision.TryGetComponent<PointsSystem>(out _ps) ? _ps : null;
+        PointsSystem pointsSystem =
+            collision.GetComponentInParent<PointsSystem>();
 
-        if (_ps == null)
+        if (pointsSystem == null || coinManager == null)
             return;
-        if (_lm == null)
-            return;
-        _collected = true;
 
+        collected = true;
+
+        coinManager.CollectCoin(
+            coinIndex,
+            pointsSystem,
+            this
+        );
+    }
+
+    public void MarkCollected()
+    {
         Destroy(gameObject);
-        _ps.AddPoints(points);
-        _lm.CollectCoin();
     }
 }

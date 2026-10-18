@@ -1,13 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Text;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
-using System;
-using UnityEngine.Events;
 
 public class PointsController : MonoBehaviour
 {
@@ -16,17 +8,37 @@ public class PointsController : MonoBehaviour
 
     private void OnEnable()
     {
-        if (_ps != null)
-        {
-            _ps.OnPointsChanged += UpdateScore;
-        }
+        ConnectToPointsSystem();
     }
 
-    private void Start()
+    private void ConnectToPointsSystem()
     {
         if (_ps != null)
         {
+            _ps.OnPointsChanged -= UpdateScore;
+        }
+
+        PlayerController player = PlayerPersistence.PersistentPlayer;
+
+        if (player == null)
+        {
+            player = FindFirstObjectByType<PlayerController>();
+        }
+
+        if (player != null)
+        {
+            _ps = player.GetComponent<PointsSystem>();
+        }
+
+        if (_ps != null)
+        {
+            _ps.OnPointsChanged += UpdateScore;
+
             UpdateScore(_ps.GetPoints());
+        }
+        else
+        {
+            Debug.Log("Error");
         }
     }
 
@@ -42,7 +54,7 @@ public class PointsController : MonoBehaviour
     {
         if (_pointsText != null)
         {
-            _pointsText.text = $"{points}";
+            _pointsText.text = points.ToString();
         }
     }
 }

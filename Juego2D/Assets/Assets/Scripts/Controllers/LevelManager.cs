@@ -29,7 +29,6 @@ public class LevelManager : MonoBehaviour
             );
         }
     }
-
     public void CollectCoin()
     {
         if (_levelCompleted)
@@ -42,7 +41,6 @@ public class LevelManager : MonoBehaviour
             CompleteLevel();
         }
     }
-
     private void CompleteLevel()
     {
         if (_levelCompleted)
@@ -52,7 +50,6 @@ public class LevelManager : MonoBehaviour
 
         StartCoroutine(FadeAndLoadScene(nextSceneName));
     }
-
     private IEnumerator FadeAndLoadScene(string sceneName)
     {
         fadeImage.gameObject.SetActive(true);
@@ -76,7 +73,6 @@ public class LevelManager : MonoBehaviour
 
         LoadNextLevel();
     }
-
     private void LoadNextLevel()
     {
         if (!string.IsNullOrWhiteSpace(nextSceneName))
@@ -87,9 +83,7 @@ public class LevelManager : MonoBehaviour
             }
             else
             {
-                Debug.LogError(
-                    $"No hay escena"
-                );
+                Debug.Log("No hay escena");
             }
 
             return;
@@ -107,9 +101,14 @@ public class LevelManager : MonoBehaviour
             Debug.Log("GG");
         }
     }
-
     public void NextLevel()
     {
         StartCoroutine(FadeAndLoadScene(nextSceneName));
     }
+    public void SetTotalCoins(int totalCoins)
+    {
+        _totalCoins = totalCoins;
+        _collectedCoins = 0;
+    }
+
 }
