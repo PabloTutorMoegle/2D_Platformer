@@ -1,37 +1,34 @@
 fileFormatVersion: 2
-guid: 4b11ad6ba17740d40a109277e0c8595d
+guid: 8fcb051a4cd0cd846a12edfb1017f4f4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3688874806606734326
-    second: SimpleMedal_0
+      213: -2442376644214155571
+    second: 2D Pickups v6.2 spritesheet_0
   - first:
-      213: -4255380647498750495
-    second: SimpleMedal_1
+      213: 3207372165212617614
+    second: 2D Pickups v6.2 spritesheet_1
   - first:
-      213: 8941955071256818273
-    second: SimpleMedal_2
+      213: -2837727968435297238
+    second: 2D Pickups v6.2 spritesheet_2
   - first:
-      213: -2040095524739958646
-    second: SimpleMedal_3
+      213: -7173003525342006096
+    second: 2D Pickups v6.2 spritesheet_3
   - first:
-      213: 8847061877726551678
-    second: SimpleMedal_4
+      213: 593741455082068849
+    second: 2D Pickups v6.2 spritesheet_4
   - first:
-      213: -3927292357124640439
-    second: SimpleMedal_5
+      213: 6066325612735239030
+    second: 2D Pickups v6.2 spritesheet_5
   - first:
-      213: -2678378289423468933
-    second: SimpleMedal_6
+      213: 4590031244058766364
+    second: 2D Pickups v6.2 spritesheet_6
   - first:
-      213: 6363718915345477935
-    second: SimpleMedal_7
+      213: 6495033326967414993
+    second: 2D Pickups v6.2 spritesheet_7
   - first:
-      213: 1947702977797007364
-    second: SimpleMedal_8
-  - first:
-      213: -3171589914688171566
-    second: SimpleMedal_9
+      213: 5714641426185769055
+    second: 2D Pickups v6.2 spritesheet_8
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -140,13 +137,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SimpleMedal_0
+      name: 2D Pickups v6.2 spritesheet_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 349
-        width: 171
-        height: 281
+        x: 5
+        y: 69
+        width: 22
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,20 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6f3aea49714813330800000000000000
-      internalID: 3688874806606734326
+      spriteID: dc697e1e16fea1ed0800000000000000
+      internalID: -2442376644214155571
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SimpleMedal_1
+      name: 2D Pickups v6.2 spritesheet_1
       rect:
         serializedVersion: 2
-        x: 189
-        y: 339
-        width: 152
-        height: 291
+        x: 37
+        y: 69
+        width: 22
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -177,20 +174,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1e5e3c9d8d9d1f4c0800000000000000
-      internalID: -4255380647498750495
+      spriteID: e8b39f9adffd28c20800000000000000
+      internalID: 3207372165212617614
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SimpleMedal_2
+      name: 2D Pickups v6.2 spritesheet_2
       rect:
         serializedVersion: 2
-        x: 379
-        y: 349
-        width: 132
-        height: 281
+        x: 70
+        y: 68
+        width: 20
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -199,20 +196,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 162f3c3c2c4381c70800000000000000
-      internalID: 8941955071256818273
+      spriteID: a242938927d5e98d0800000000000000
+      internalID: -2837727968435297238
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SimpleMedal_3
+      name: 2D Pickups v6.2 spritesheet_3
       rect:
         serializedVersion: 2
-        x: 559
-        y: 349
-        width: 132
-        height: 281
+        x: 5
+        y: 39
+        width: 22
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,20 +218,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a88b20cddef10b3e0800000000000000
-      internalID: -2040095524739958646
+      spriteID: 0b47d534c4f547c90800000000000000
+      internalID: -7173003525342006096
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SimpleMedal_4
+      name: 2D Pickups v6.2 spritesheet_4
       rect:
         serializedVersion: 2
-        x: 749
-        y: 359
-        width: 112
-        height: 271
+        x: 37
+        y: 36
+        width: 22
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -243,20 +240,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e7e9acf67e317ca70800000000000000
-      internalID: 8847061877726551678
+      spriteID: 17b179625b46d3800800000000000000
+      internalID: 593741455082068849
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SimpleMedal_5
+      name: 2D Pickups v6.2 spritesheet_5
       rect:
         serializedVersion: 2
-        x: 19
-        y: 9
-        width: 132
-        height: 282
+        x: 69
+        y: 36
+        width: 22
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -265,20 +262,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 941ba7ca8647f79c0800000000000000
-      internalID: -3927292357124640439
+      spriteID: 67310f6010bef2450800000000000000
+      internalID: 6066325612735239030
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SimpleMedal_6
+      name: 2D Pickups v6.2 spritesheet_6
       rect:
         serializedVersion: 2
-        x: 189
-        y: 9
-        width: 152
-        height: 282
+        x: 5
+        y: 7
+        width: 22
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -287,20 +284,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b76bbcce22d74dad0800000000000000
-      internalID: -2678378289423468933
+      spriteID: c1c2112f81113bf30800000000000000
+      internalID: 4590031244058766364
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SimpleMedal_7
+      name: 2D Pickups v6.2 spritesheet_7
       rect:
         serializedVersion: 2
-        x: 379
-        y: 19
-        width: 132
-        height: 272
+        x: 37
+        y: 4
+        width: 22
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -309,20 +306,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f21f99713a8705850800000000000000
-      internalID: 6363718915345477935
+      spriteID: 1d06732166ef22a50800000000000000
+      internalID: 6495033326967414993
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SimpleMedal_8
+      name: 2D Pickups v6.2 spritesheet_8
       rect:
         serializedVersion: 2
-        x: 559
-        y: 9
-        width: 132
-        height: 282
+        x: 69
+        y: 4
+        width: 22
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -331,30 +328,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 408af87f981a70b10800000000000000
-      internalID: 1947702977797007364
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SimpleMedal_9
-      rect:
-        serializedVersion: 2
-        x: 729
-        y: 0
-        width: 151
-        height: 291
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2d1dcc1c6cf3cf3d0800000000000000
-      internalID: -3171589914688171566
+      spriteID: f50d882891c7e4f40800000000000000
+      internalID: 5714641426185769055
       vertices: []
       indices: 
       edges: []
@@ -373,16 +348,15 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      SimpleMedal_0: 3688874806606734326
-      SimpleMedal_1: -4255380647498750495
-      SimpleMedal_2: 8941955071256818273
-      SimpleMedal_3: -2040095524739958646
-      SimpleMedal_4: 8847061877726551678
-      SimpleMedal_5: -3927292357124640439
-      SimpleMedal_6: -2678378289423468933
-      SimpleMedal_7: 6363718915345477935
-      SimpleMedal_8: 1947702977797007364
-      SimpleMedal_9: -3171589914688171566
+      2D Pickups v6.2 spritesheet_0: -2442376644214155571
+      2D Pickups v6.2 spritesheet_1: 3207372165212617614
+      2D Pickups v6.2 spritesheet_2: -2837727968435297238
+      2D Pickups v6.2 spritesheet_3: -7173003525342006096
+      2D Pickups v6.2 spritesheet_4: 593741455082068849
+      2D Pickups v6.2 spritesheet_5: 6066325612735239030
+      2D Pickups v6.2 spritesheet_6: 4590031244058766364
+      2D Pickups v6.2 spritesheet_7: 6495033326967414993
+      2D Pickups v6.2 spritesheet_8: 5714641426185769055
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

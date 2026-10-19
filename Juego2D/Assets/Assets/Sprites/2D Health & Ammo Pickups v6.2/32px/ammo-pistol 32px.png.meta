@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: fa4ea30400d06a342a979b51211a82e3
+guid: b137ba2427a03a942837e7434522f227
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1883991499484989080
-    second: medal6_0
+      213: 7985601754133669049
+    second: ammo-pistol 32px_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: medal6_0
+      name: ammo-pistol 32px_0
       rect:
         serializedVersion: 2
-        x: 366
-        y: 174
-        width: 147
-        height: 282
+        x: 5
+        y: 7
+        width: 22
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 89688a67948452a10800000000000000
-      internalID: 1883991499484989080
+      spriteID: 9b4afd06c7e82de60800000000000000
+      internalID: 7985601754133669049
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      medal6_0: 1883991499484989080
+      ammo-pistol 32px_0: 7985601754133669049
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

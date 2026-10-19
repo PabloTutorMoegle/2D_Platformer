@@ -1600,6 +1600,55 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &828424117
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 828424119}
+  - component: {fileID: 828424118}
+  m_Layer: 0
+  m_Name: LevelManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &828424118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 828424117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9455edf0366fe040a910f8ad2a2dbcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelManager
+  nextSceneName: Level2
+  fadeImage: {fileID: 1215219871}
+  fadeDuration: 0.5
+  firstSelectedButton: {fileID: 0}
+  _totalCoins: 0
+--- !u!4 &828424119
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 828424117}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.67122, y: 0.97666, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &931952701
 GameObject:
   m_ObjectHideFlags: 0
@@ -1677,13 +1726,13 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 931952705}
     m_ColliderPaths:
-    - - X: -50000000
+    - - X: -45000000
         Y: 10000000
-      - X: -55000000
-        Y: 10000000
-      - X: -55000000
-        Y: 5000000
       - X: -50000000
+        Y: 10000000
+      - X: -50000000
+        Y: 5000000
+      - X: -45000000
         Y: 5000000
     - - X: 55000000
         Y: -20000000
@@ -1703,10 +1752,10 @@ CompositeCollider2D:
         Y: -35000000
   m_CompositePaths:
     m_Paths:
-    - - {x: -5.000029, y: 0.5}
-      - {x: -5.000029, y: 1}
-      - {x: -5.5, y: 0.99997073}
-      - {x: -5.499971, y: 0.5}
+    - - {x: -4.500029, y: 0.5}
+      - {x: -4.500029, y: 1}
+      - {x: -5, y: 0.99997073}
+      - {x: -4.999971, y: 0.5}
     - - {x: 5.499971, y: -2.5}
       - {x: 5.499971, y: -2}
       - {x: 5, y: -2.0000293}
@@ -1869,7 +1918,7 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: -11, y: 1, z: 0}
+  - first: {x: -10, y: 1, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 4
@@ -3014,6 +3063,54 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PointsController
   _ps: {fileID: 0}
   _pointsText: {fileID: 1250797156}
+--- !u!1 &1157996911
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1157996913}
+  - component: {fileID: 1157996912}
+  m_Layer: 0
+  m_Name: CollectibleItems
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1157996912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1157996911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c8e661a6702c394fa363cf3490f31db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CoinManager
+  coinPrefab: {fileID: 6988717616821503471, guid: 99d429aabda81d3409a7032fc868c964, type: 3}
+  levelFileName: Level2
+  levelManager: {fileID: 828424118}
+  nextCoinSprite: {fileID: 21300000, guid: e920a1a7191e56b4bb5c2c04f08aca72, type: 3}
+--- !u!4 &1157996913
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1157996911}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 344.27075, y: 784.3293, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1160900148
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5483,3 +5580,5 @@ SceneRoots:
   - {fileID: 2040940465}
   - {fileID: 770553776}
   - {fileID: 2847860}
+  - {fileID: 1157996913}
+  - {fileID: 828424119}

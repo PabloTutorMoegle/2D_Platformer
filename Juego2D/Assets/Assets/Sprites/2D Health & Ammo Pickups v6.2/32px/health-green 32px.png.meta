@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 940ebd670f88d0145a40cec39f51203f
+guid: 9b11b2c458fb0144e8f6327973e58493
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3124059490619815892
-    second: medal7_0
+      213: -5767247377633523197
+    second: health-green 32px_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: medal7_0
+      name: health-green 32px_0
       rect:
         serializedVersion: 2
-        x: 374
-        y: 179
-        width: 132
-        height: 272
+        x: 5
+        y: 5
+        width: 22
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4d7f4930e83ea5b20800000000000000
-      internalID: 3124059490619815892
+      spriteID: 30ac954f01f96ffa0800000000000000
+      internalID: -5767247377633523197
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      medal7_0: 3124059490619815892
+      health-green 32px_0: -5767247377633523197
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
