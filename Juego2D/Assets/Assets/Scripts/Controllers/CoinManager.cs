@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Globalization;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class CoinManager : MonoBehaviour
@@ -15,7 +16,7 @@ public class CoinManager : MonoBehaviour
     }
 
     [SerializeField] private GameObject coinPrefab;
-    [SerializeField] private string levelFileName = "Level1";
+    [SerializeField] private string levelFileName;
     [SerializeField] private LevelManager levelManager;
     [SerializeField] private Sprite nextCoinSprite;
     private readonly List<CoinController> spawnedCoins = new List<CoinController>();
@@ -40,6 +41,8 @@ public class CoinManager : MonoBehaviour
             return;
         }
 
+        Debug.Log("Inicio");
+        
         LoadCoins();
         SpawnCoins();
 
@@ -96,8 +99,14 @@ public class CoinManager : MonoBehaviour
             out result
         );
     }
+    
     private void SpawnCoins()
     {
+        if (coinPrefab == null)
+        {
+            return;
+        }
+
         for (int i = 0; i < coins.Count; i++)
         {
             CoinData data = coins[i];
@@ -108,8 +117,18 @@ public class CoinManager : MonoBehaviour
                 Quaternion.identity
             );
 
+            if (coinObject == null)
+            {
+                continue;
+            }
+
             CoinController coin =
                 coinObject.GetComponent<CoinController>();
+
+            if (coin == null)
+            {
+                coin = coinObject.GetComponentInChildren<CoinController>(true);
+            }
 
             if (coin == null)
             {
@@ -119,10 +138,11 @@ public class CoinManager : MonoBehaviour
 
             coin.Initialize(this, i, nextCoinSprite);
             spawnedCoins.Add(coin);
-
-            UpdateNextCoinSprite();
         }
+
+        UpdateNextCoinSprite();
     }
+
     public void CollectCoin(int coinIndex, PointsSystem pointsSystem, CoinController coin)
     {
         if (coin == null || pointsSystem == null)
