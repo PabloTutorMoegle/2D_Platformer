@@ -6,7 +6,6 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
-    [Header("Datos de la partida")]
     [SerializeField] private float startingLives = 3f;
     [SerializeField] private float currentLives;
     [SerializeField] private float totalScore;
