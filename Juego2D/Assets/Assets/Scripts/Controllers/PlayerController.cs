@@ -107,12 +107,10 @@ public class PlayerController : MonoBehaviour
     {
         _isGrounded = true;
     }
-
     public void UpdateHealth()
     {
         currentHealth = _hs.GetCurrentHealth();
     }
-
     private void OnEnable()
     {
         _actions?.Enable();

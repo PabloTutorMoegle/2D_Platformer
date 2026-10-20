@@ -10,7 +10,6 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private Image fadeImage;
     [SerializeField] private float fadeDuration = 0.5f;
     [SerializeField] private Button firstSelectedButton;
-    public string GameOverSceneName = "GameOverScene";
 
     public int _totalCoins;
     private int _collectedCoins;
@@ -110,9 +109,5 @@ public class LevelManager : MonoBehaviour
     {
         _totalCoins = totalCoins;
         _collectedCoins = 0;
-    }
-    public void GameOver()
-    {
-        StartCoroutine(FadeAndLoadScene(GameOverSceneName));
     }
 }

@@ -2270,6 +2270,7 @@ MonoBehaviour:
   startingLives: 3
   currentLives: 0
   totalScore: 0
+  gameOverSceneName: GameOverScene
 --- !u!4 &676709710
 Transform:
   m_ObjectHideFlags: 0
@@ -6057,7 +6058,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5684549310148105751, guid: a47160a7d4339d64280bbe7cdb62fd91, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.93
+      value: -2.91
       objectReference: {fileID: 0}
     - target: {fileID: 5684549310148105751, guid: a47160a7d4339d64280bbe7cdb62fd91, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6091,6 +6092,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8232910382745885861, guid: a47160a7d4339d64280bbe7cdb62fd91, type: 3}
+      propertyPath: OnZeroLifes.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 676709709}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

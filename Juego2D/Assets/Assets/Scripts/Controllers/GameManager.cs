@@ -9,9 +9,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float startingLives = 3f;
     [SerializeField] private float currentLives;
     [SerializeField] private float totalScore;
-
+    public string gameOverSceneName;
     private GameObject player;
-
     public float CurrentLives => currentLives;
     public float TotalScore => totalScore;
 
@@ -86,5 +85,9 @@ public class GameManager : MonoBehaviour
             SceneManager.sceneLoaded -= OnSceneLoaded;
             Instance = null;
         }
+    }
+    public void GameOver()
+    {
+        SceneManager.LoadScene(gameOverSceneName);
     }
 }
