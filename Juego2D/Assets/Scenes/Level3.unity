@@ -1951,8 +1951,8 @@ Tilemap:
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Origin: {x: -12, y: -9, z: 0}
-  m_Size: {x: 28, y: 22, z: 1}
+  m_Origin: {x: -36, y: -18, z: 0}
+  m_Size: {x: 70, y: 31, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -2496,6 +2496,16 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: 5, y: 4, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 5
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: -9, y: 6, z: 0}
     second:
       serializedVersion: 2
@@ -2584,15 +2594,15 @@ Tilemap:
     m_RefCount: 0
     m_Data: {fileID: 11400000, guid: 48e84445ec022054c99a08ac2ffdfa0c, type: 2}
   - serializedVersion: 2
-    m_RefCount: 32
+    m_RefCount: 33
     m_Data: {fileID: 11400000, guid: 1ef406a2a8308244484cd7dde417c1e6, type: 2}
   m_TileSpriteArray:
   - serializedVersion: 2
-    m_RefCount: 32
+    m_RefCount: 33
     m_Data: {fileID: 1577427322, guid: d81eb1296ad34c8408e88afae90832ba, type: 3}
   m_TileMatrixArray:
   - serializedVersion: 2
-    m_RefCount: 32
+    m_RefCount: 33
     m_Data:
       e00: 1
       e01: 0
@@ -2612,7 +2622,7 @@ Tilemap:
       e33: 1
   m_TileColorArray:
   - serializedVersion: 2
-    m_RefCount: 32
+    m_RefCount: 33
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -4977,7 +4987,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 303997913}
   levelSprite: {fileID: 4314626198504049278, guid: c78049fa45aea48489c0d3f92e173d4d, type: 3}
   levelAnimator: {fileID: 9100000, guid: b60c101b207489040a15c1afbee7fb5c, type: 2}
-  levelScale: {x: 1, y: 1, z: 1}
+  levelScale: {x: 0.4, y: 0.4, z: 0.4}
 --- !u!4 &1861355966
 Transform:
   m_ObjectHideFlags: 0
@@ -5167,7 +5177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlatformsController
   isBreakable: 0
-  isMoving: 1
+  isMoving: 0
   moveDirection: {x: 1, y: 0, z: 0}
   speed: 1
 --- !u!19719996 &1980178465

@@ -6048,10 +6048,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1130424527576600709, guid: a47160a7d4339d64280bbe7cdb62fd91, type: 3}
-      propertyPath: m_Radius
-      value: 0.16
-      objectReference: {fileID: 0}
     - target: {fileID: 2915603727612109609, guid: a47160a7d4339d64280bbe7cdb62fd91, type: 3}
       propertyPath: m_Name
       value: Player
@@ -6100,6 +6096,10 @@ PrefabInstance:
       propertyPath: OnZeroLifes.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 676709709}
+    - target: {fileID: 8932607243921279669, guid: a47160a7d4339d64280bbe7cdb62fd91, type: 3}
+      propertyPath: OnCollide.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

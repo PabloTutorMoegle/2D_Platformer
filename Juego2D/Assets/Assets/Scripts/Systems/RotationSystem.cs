@@ -15,6 +15,14 @@ public class RotationSystem : MonoBehaviour
         Debug.Log("Rotation: " + rotation);
         transform.Rotate(0,0,rotation*turnspeed);       
     }
+    public void TurnTowards(float targetAngle)
+    {
+        float currentAngle = transform.eulerAngles.z;
+
+        float newAngle = Mathf.MoveTowardsAngle(currentAngle, targetAngle, turnspeed * Time.deltaTime);
+
+        transform.rotation = Quaternion.Euler(0f, 0f, newAngle);
+    }
     public void SetRandomRotation2D()
     { 
         transform.eulerAngles = new Vector3(0.0f, 0.0f, UnityEngine.Random.value * 360.0f);

@@ -55,6 +55,6 @@ public class PlainsController : MonoBehaviour
         moveDirection = (_player.position - transform.position).normalized;
 
         _mv.MoveLinearVelocity(moveDirection, moveSpeed);
-        _rs.Turn(Vector3.SignedAngle(Vector3.right, moveDirection, Vector3.forward));
+        _rs.TurnTowards(Vector3.SignedAngle(Vector3.right, moveDirection, Vector3.forward));
     }
 }

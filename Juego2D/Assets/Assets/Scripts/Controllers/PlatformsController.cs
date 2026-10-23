@@ -26,20 +26,21 @@ public class PlatformsController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Collision");
-        if (isBreakable)
-        {    
+        if (isBreakable && collision.gameObject.TryGetComponent<PlayerController>(out PlayerController player))
+        {
             ContactPoint2D contact = collision.GetContact(0);
 
-            Vector3 hitPosition = contact.point - contact.normal * 0.025f;
+            Vector3Int cell = tilemap.WorldToCell(contact.point);
 
-            Vector3Int cellPosition =
-                tilemap.WorldToCell(hitPosition);
-
-            if (tilemap.HasTile(cellPosition))
+            if (!tilemap.HasTile(cell))
             {
-                tilemap.SetTile(cellPosition, null);
+                cell = tilemap.WorldToCell(
+                    contact.point + (Vector2)contact.normal * 0.025f
+                );
             }
+
+            if (tilemap.HasTile(cell))
+                tilemap.SetTile(cell, null);
         }
         if(isMoving)
         {

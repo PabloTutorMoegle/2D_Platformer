@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5684549310148105751}
   - component: {fileID: 6452716189322776988}
   - component: {fileID: 9139280540174217113}
-  - component: {fileID: 1130424527576600709}
   - component: {fileID: 931216127962463105}
   - component: {fileID: 8932607243921279669}
   - component: {fileID: 8232910382745885861}
@@ -21,7 +20,7 @@ GameObject:
   - component: {fileID: 3202396922954400467}
   - component: {fileID: 8814561268867752607}
   - component: {fileID: 7245131663885312068}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,7 +68,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!70 &9139280540174217113
 CapsuleCollider2D:
@@ -108,42 +107,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.5, y: 0.84}
   m_Direction: 0
---- !u!58 &1130424527576600709
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2915603727612109609}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.1}
-  m_Radius: 0.15
 --- !u!114 &931216127962463105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,6 +153,18 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 5974753216833533518, guid: 706b7f620ea83e54b815ce48ec97cd5f, type: 3}
+        m_TargetAssemblyTypeName: DamageSystem, Assembly-CSharp
+        m_MethodName: DoDamage
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DamageSystem, Assembly-CSharp
         m_MethodName: DoDamage
         m_Mode: 0
@@ -365,7 +340,7 @@ GameObject:
   - component: {fileID: 1089149502350896532}
   - component: {fileID: 8184121523694789062}
   - component: {fileID: 9110911567570169883}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}

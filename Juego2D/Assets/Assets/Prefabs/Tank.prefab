@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 8381047805676395891}
   - component: {fileID: 5974753216833533518}
   - component: {fileID: 3064743032849511595}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Tank
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -325,7 +325,7 @@ GameObject:
   - component: {fileID: 5896108260638733764}
   - component: {fileID: 2932907860578717518}
   - component: {fileID: 4385551693941423693}
-  m_Layer: 6
+  m_Layer: 13
   m_Name: EndDetector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
