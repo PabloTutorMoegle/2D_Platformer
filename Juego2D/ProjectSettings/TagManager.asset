@@ -14,9 +14,9 @@ TagManager:
   - EndDetector
   - Frame
   - BreakPlatforms
-  - 
-  - 
-  - 
+  - Plains
+  - Platforms
+  - MovingPlatforms
   - 
   - 
   - 

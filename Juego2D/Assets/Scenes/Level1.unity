@@ -1055,7 +1055,7 @@ GameObject:
   - component: {fileID: 536321575}
   - component: {fileID: 536321574}
   - component: {fileID: 536321576}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Platforms
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2102,8 +2102,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4283980031
-  m_fontColor: {r: 1, g: 0.3443396, b: 0.3443396, a: 1}
+    rgba: 4278200032
+  m_fontColor: {r: 0.87843144, g: 0.14901961, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -6048,6 +6048,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1130424527576600709, guid: a47160a7d4339d64280bbe7cdb62fd91, type: 3}
+      propertyPath: m_Radius
+      value: 0.16
+      objectReference: {fileID: 0}
     - target: {fileID: 2915603727612109609, guid: a47160a7d4339d64280bbe7cdb62fd91, type: 3}
       propertyPath: m_Name
       value: Player

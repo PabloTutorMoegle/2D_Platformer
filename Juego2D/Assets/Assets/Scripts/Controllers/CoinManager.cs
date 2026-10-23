@@ -32,7 +32,6 @@ public class CoinManager : MonoBehaviour
         {
             return;
         }
-
         if (levelManager == null)
             levelManager = FindFirstObjectByType<LevelManager>();
 
@@ -40,8 +39,6 @@ public class CoinManager : MonoBehaviour
         {
             return;
         }
-
-        Debug.Log("Inicio");
         
         LoadCoins();
         SpawnCoins();

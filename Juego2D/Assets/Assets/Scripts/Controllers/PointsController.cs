@@ -36,10 +36,6 @@ public class PointsController : MonoBehaviour
 
             UpdateScore(_ps.GetPoints());
         }
-        else
-        {
-            Debug.Log("Error");
-        }
     }
 
     private void OnDisable()

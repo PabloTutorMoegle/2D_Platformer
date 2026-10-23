@@ -3,11 +3,12 @@ using UnityEngine;
 public class PlainsController : MonoBehaviour
 {
     private MovementSystem _mv;
+    private RotationSystem _rs;
     private HealthSystem _hs;
     private SpriteRenderer _sr;
     private Animator _anim;
 
-    public GameObject endDetector;
+    private Transform _player;
 
     //Health variables
     public float maxHealth = 1f;
@@ -16,14 +17,17 @@ public class PlainsController : MonoBehaviour
 
     //Movement variables
     public float moveSpeed = 2f;
-    public Vector3 moveDirection = new Vector3(-1f, 0f, 0f);
+    public Vector3 moveDirection;
 
     private void Awake()
     {
         TryGetComponent<MovementSystem>(out _mv);
+        TryGetComponent<RotationSystem>(out _rs);
         TryGetComponent<HealthSystem>(out _hs);
-        TryGetComponent<SpriteRenderer>(out _sr);
-        TryGetComponent<Animator>(out _anim);
+        _sr = GetComponentInChildren<SpriteRenderer>(true);
+        _anim = GetComponentInChildren<Animator>(true);
+
+        FindPlayer();
     }
 
     private void Start()
@@ -31,10 +35,26 @@ public class PlainsController : MonoBehaviour
         _hs.SetMaxHealth(maxHealth);
         _hs.SetHealth(starterHealth);
         currentHealth = _hs.GetCurrentHealth();
+
+        FindPlayer();
+    }
+
+    private void FindPlayer()
+    {
+        PlayerController playerController =
+            FindFirstObjectByType<PlayerController>();
+
+        if (playerController != null)
+        {
+            _player = playerController.transform;
+        }
     }
 
     private void Update()
     {
+        moveDirection = (_player.position - transform.position).normalized;
+
         _mv.MoveLinearVelocity(moveDirection, moveSpeed);
+        _rs.Turn(Vector3.SignedAngle(Vector3.right, moveDirection, Vector3.forward));
     }
 }

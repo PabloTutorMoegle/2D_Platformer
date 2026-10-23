@@ -1,0 +1,2 @@
+# x,y,z,puntosBase,puntosEnOrden
+-3.25,-3.25,0,100,100
