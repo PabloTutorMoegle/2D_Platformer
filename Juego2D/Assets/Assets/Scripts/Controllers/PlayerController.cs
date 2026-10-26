@@ -22,8 +22,8 @@ public class PlayerController : MonoBehaviour
     
     // public GameObject attackHitbox;
     //Health variables
-    public float maxHealth = 3f;
-    public float starterHealth = 3f;
+    public float maxHealth;
+    public float starterHealth;
     public float currentHealth;
 
     //Movement variables
